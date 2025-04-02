@@ -1,22 +1,22 @@
 # Python Homework Template
 Please work on : `exercise.py`
 
-## Purpose<br>목적:
+## Purpose 목적:
 
 Why do we want to do this assignment? What do we want to accomplish?
 
-## Description<br>설명:
+## Description 설명:
 
 * Describe homework here
 
-## Instructions<br>지침:
+## Instructions 지침:
 
 * How to do this homework
 * `classroom.yml` file is at `.github/workflows/` folder. `.github` folder is hidden on the Linux operating system but will be visible on the Github repository.
 * Please set `vars.PYTHON_GRADER_URL` in the `classroom.yml` in the repository settings (Settings > Secrets and Variables > Actions > Variables) to your grader image (e.g., ghcr.io/your-org/python-pytest:latest).
 * Set your AI feedback natural language in `classroom.yml`.
 
-## Example Run<br>실행 예시:
+## Example Run 실행 예시:
 
 * input
 ```
@@ -28,13 +28,13 @@ input example here
 output example here
 ```
 
-## Tips<br>도움 의견:
+## Tips 팁:
 
 * please add some more hints here
 
 __Happy coding!__
 
-## Grading Criteria<br>채점 기준
+## Grading Criteria 채점 기준
 
 | Criteria | Points |
 |:--------:|:------:|
@@ -43,7 +43,7 @@ __Happy coding!__
 
 ``From here is common to all assignments.``
 
-## Submission<br>제출 방법
+## Submission 제출 방법
 
 1. Modify the contents of the `exercise.py` file to write your program.<br>`exercise.py` 파일의 내용을 수정하여 프로그램을 작성합니다.
 2. Use the GitHub online editor to commit and push your changes. (See below for detailed instructions)<br>GitHub 온라인 편집기를 사용하여 수정 사항을 커밋하고 푸시합니다. (자세한 사용법은 아래 참조)
