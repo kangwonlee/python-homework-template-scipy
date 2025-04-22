@@ -107,8 +107,13 @@ jobs:
           --env INPUT_MODEL="${{ secrets.DEFAULT_MODEL }}" \
           --env INPUT_EXPLANATION-IN="Korean" \
           ${{ env.image_url }} \
-          python3 ai_tutor/entrypoint.py >> $GITHUB_STEP_SUMMARY
+          python3 ai_tutor/entrypoint.py > ./feedback.md
       timeout-minutes: 2
+
+    - name: forward feedback to summary
+      if: always()
+      run: |
+        cat ./feedback.md >> $GITHUB_STEP_SUMMARY
 
     - name: upload artifacts
       id: artifacts
@@ -119,5 +124,6 @@ jobs:
         path: |
           ./*.png
           ./*.json
+          ./feedback.md
         retention-days: 21
         overwrite: true
