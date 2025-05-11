@@ -12,10 +12,11 @@ Why do we want to do this assignment? What do we want to accomplish?
 ## Instructions 지침:
 
 * How to do this homework
-* This repository is for a python assignment writing a function in `exercise.py`.
+* This repository is for a numerical analysis assignment writing one or more python functions in `exercise.py`.
 * `classroom.yml` file is at `.github/workflows/` folder. `.github` folder is hidden on the Linux operating system but will be visible on the Github repository.
-* Please set `vars.PYTHON_GRADER_URL` in the `classroom.yml` in the repository settings (Settings > Secrets and Variables > Actions > Variables) to your grader image (e.g., ghcr.io/your-org/python-pytest:latest).
+* Please set environment variable `vars.ECA_HW_???` in the `classroom.yml` in the repository settings (Settings > Secrets and Variables > Actions > Variables) to your grader image (e.g., `ghcr.io/your-org/eca-pytest-???:latest`).
 * Set your AI feedback natural language in `classroom.yml`.
+* All executable lines in the `exercise.py` file should belong to a function. Please do not include any other code outside of the function.
 
 ### Function Arguments 함수 인자
 
