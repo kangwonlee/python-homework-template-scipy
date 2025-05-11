@@ -17,17 +17,18 @@ Why do we want to do this assignment? What do we want to accomplish?
 * Please set `vars.PYTHON_GRADER_URL` in the `classroom.yml` in the repository settings (Settings > Secrets and Variables > Actions > Variables) to your grader image (e.g., ghcr.io/your-org/python-pytest:latest).
 * Set your AI feedback natural language in `classroom.yml`.
 
-## Example Run 실행 예시:
+### Function Arguments 함수 인자
 
-* input
-```
-input example here
-```
-* output
-```
-----------
-output example here
-```
+ Argument<br>인자 | Data Type<br>자료형 | Description<br>설명
+:---------------:|:-----------------:|------------------------
+    `a`          | `float`           | coefficient<br>계수
+    `x`          | `List[float]`     | a vector<br>벡터
+
+### Function Return 함수 반환
+
+ Return Value<br>반환값 | Data Type<br>자료형 | Description<br>설명
+:--------------------:|:------------------:|--------------------
+     `y`              | `List[float]`      | product of the coefficient and the vector<br>계수와 벡터의 곱
 
 ## Tips 팁:
 
