@@ -1,3 +1,5 @@
+# begin .github/workflows/classroom.yml
+
 name: Autograding Tests
 on:
   - push
@@ -127,3 +129,5 @@ jobs:
           ./feedback.md
         retention-days: 21
         overwrite: true
+
+# end .github/workflows/classroom.yml
