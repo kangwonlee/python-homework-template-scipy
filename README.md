@@ -41,8 +41,8 @@ __Happy coding!__
 | Criteria<br>기준 | Points<br>배점 |
 |:-----:|:-----:|
 | Is the code written according to Python syntax?<br>Python 문법대로 작성되었는가? | 1 |
-| Are all code lines belong to one of functions?<br>모든 코드가 함수 내에 작성되었는가? | 1 |
-| Is the output as expected?<br>출력 결과가 예상과 같은가? | 3 |
+| Does code respect style guidelines?<br>코드 스타일 권고사항을 준수하는가? | 1 |
+| Is the code implemented as required?<br>코드가 요구사항을 만족하는가? | 3 |
 
 ``From here is common to all assignments.``
 
