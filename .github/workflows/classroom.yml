@@ -37,8 +37,8 @@ jobs:
         echo "c_mnt=/app/workspace" >> $GITHUB_ENV
         if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
           echo "image_url=${{ github.event.client_payload.image_url }}" >> $GITHUB_ENV
-        elif [ -n "${{ vars.PYTHON_GRADER_URL }}" ]; then
-          echo "image_url=${{ vars.PYTHON_GRADER_URL }}" >> $GITHUB_ENV
+        elif [ -n "${{ vars.PYTHON_GRADER_??? }}" ]; then
+          echo "image_url=${{ vars.PYTHON_GRADER_??? }}" >> $GITHUB_ENV
         else
           echo "image_url=ghcr.io/${{ github.repository_owner }}/python-pytest-${ASSIGNMENT_NUM}:latest" >> $GITHUB_ENV
         fi
@@ -71,7 +71,7 @@ jobs:
       with:
         test-name: check syntax
         setup-command: "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} ${{ env.image_url }} python3 -m pip list"
-        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.syntax }} ${{ env.c_test }}/test_syntax.py" # Run test in container
+        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.syntax }} ${{ env.c_test }}/test_syntax.py"
         timeout: 2
         max-score: 1
 
@@ -91,7 +91,7 @@ jobs:
       with:
         test-name: test results
         setup-command: "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} ${{ env.image_url }} python3 -m pip list"
-        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest -n auto --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.results }} ${{ env.c_test }}/test_results.py" # Run test in container
+        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest -n auto --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.results }} ${{ env.c_test }}/test_results.py"
         timeout: 5
         max-score: 3
 
