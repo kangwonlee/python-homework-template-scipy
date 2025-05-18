@@ -59,27 +59,25 @@ __Happy coding!__
 * Click "Commit & Push."<br>[커밋 및 푸시] 선택
 * Click "Back to Repository" on the branch icon to return to your repository.<br>줄 셋 의 [리포지토리로 이동] 선택하여 저장소로 복귀
 
-## Writing Descriptive Git Commit Messages
 
-* To help you develop a better coding habits, we encourage descriptive Git commit messages when committing changes to your repositroy.
-* A good commit message clearly explains what you changed and why, making it easier for you to understand your work later.
+## Writing Descriptive Git Commit Messages<br>커밋 메시지 작성 권고안
 
-### Guidelines for Commit Messages
-* Describe the change more specifically, e.g., "Add factorial function to exercise.py" or "Fix bug in sum calculation".
-* Use Action Verbs: Start with words like "Add", "Fix", "Update", or "Refactor".
+* To help you develop a better coding habits, we encourage descriptive Git commit messages when committing changes to your repositroy.<br>보다 바람직한 코딩 습관을 기르기 위해, 저장소에 변경 사항을 등록할 때 메시지에 보다 자세히 설명하는 것을 권합니다.
+* A good commit message clearly explains what you changed and why, making it easier for you to understand your work later.<br>바람직한 커밋 메시지는 무엇을 변경했는지, 왜 변경했는지를 명확히 설명하여 나중에 수정 사항을 이해하기 쉽게 도와줄 것입니다.
 
-* Avoid Vague Messages: Messages like "update" or "fix" can be too general.
+### Guidelines for Commit Messages<br>메시지 작성 지침
+* Describe the change more specifically, e.g., "Add factorial function to exercise.py" or "Fix bug in sum calculation".<br>변경 사항을 보다 구체적으로 설명합니다. 예를 들어, "exercise.py에 팩토리얼 함수 추가" 또는 "합계 계산 버그 수정"과 같이 작성합니다.
+* Use Action Verbs: Start with words like "Add", "Fix", "Update", or "Refactor".<br>영문의 경우, "Add", "Fix", "Update", "Refactor"와 같은 동사로 시작합니다.
 
-* Keep It Concise: Aim for 15-50 characters, but ensure clarity.
+* Avoid Vague Messages: Messages like "update" or "fix" can be too general.<br>"update", "fix"와 같은 메시지는 너무 일반적입니다.
+
+* Keep It Concise: Aim for 15-50 characters, but ensure clarity.<br>15-50자 정도로 간결하게 작성하되, 명확성을 유지합니다.
 * Examples 예:
-  * Good: "Add unit tests for sort function in exercise.py"
-  * Bad: "update", "fix 1", "changed file"
+  * Good: "Add unit tests for sort function in exercise.py"<br>바람직: "exercise.py의 정렬 함수에 대한 단위 테스트 추가"
+  * Bad: "update", "fix 1", "changed file"<br>바람직하지 않음: "update", "fix 1", "changed file"
 
-### Why It Matters
-* Clear commit messages improve collaboration, debugging, and code review in real-world projects.
-
-### Resources
-* [How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+### Why It Matters 왜 중요한가
+* Clear commit messages improve collaboration, debugging, and code review in real-world projects.<br>커밋 메시지가 명확하면 프로젝트 실무에서 공동 작업, 버그 수정, 코드 검토에서 도움을 얻을 수 있을 것입니다.
 
 ## NOTICE REGARDING STUDENT SUBMISSIONS<br>제출 결과물에 대한 알림
 
