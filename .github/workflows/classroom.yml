@@ -71,7 +71,7 @@ jobs:
       with:
         test-name: check syntax
         setup-command: "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} ${{ env.image_url }} python3 -m pip list"
-        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.syntax }} ${{ env.c_test }}/test_syntax.py" # Run test in container
+        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.syntax }} ${{ env.c_test }}/test_syntax.py"
         timeout: 2
         max-score: 1
 
@@ -91,7 +91,7 @@ jobs:
       with:
         test-name: test results
         setup-command: "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} ${{ env.image_url }} python3 -m pip list"
-        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest -n auto --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.results }} ${{ env.c_test }}/test_results.py" # Run test in container
+        command:       "docker run --rm --user 1001:1001 --volume ${{ github.workspace }}:${{ env.c_mnt }} --env STUDENT_CODE_FOLDER=${{ env.c_code }} ${{ env.image_url }} python3 -m pytest -n auto --json-report --json-report-indent=4 --json-report-file=${{ env.c_json }}/${{ env.results }} ${{ env.c_test }}/test_results.py"
         timeout: 5
         max-score: 3
 
