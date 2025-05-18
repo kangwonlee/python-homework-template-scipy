@@ -59,6 +59,28 @@ __Happy coding!__
 * Click "Commit & Push."<br>[커밋 및 푸시] 선택
 * Click "Back to Repository" on the branch icon to return to your repository.<br>줄 셋 의 [리포지토리로 이동] 선택하여 저장소로 복귀
 
+## Writing Descriptive Git Commit Messages
+
+* To help you develop a better coding habits, we encourage descriptive Git commit messages when committing changes to your repositroy.
+* A good commit message clearly explains what you changed and why, making it easier for you to understand your work later.
+
+### Guidelines for Commit Messages
+* Describe the change more specifically, e.g., "Add factorial function to exercise.py" or "Fix bug in sum calculation".
+* Use Action Verbs: Start with words like "Add", "Fix", "Update", or "Refactor".
+
+* Avoid Vague Messages: Messages like "update" or "fix" can be too general.
+
+* Keep It Concise: Aim for 15-50 characters, but ensure clarity.
+* Examples 예:
+  * Good: "Add unit tests for sort function in exercise.py"
+  * Bad: "update", "fix 1", "changed file"
+
+### Why It Matters
+* Clear commit messages improve collaboration, debugging, and code review in real-world projects.
+
+### Resources
+* [How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+
 ## NOTICE REGARDING STUDENT SUBMISSIONS<br>제출 결과물에 대한 알림
 
 * Your submissions for this assignment may be used for various educational purposes. These purposes may include developing and improving educational tools, research, creating test cases, and training datasets.<br>제출 결과물은 다양한 교육 목적으로 사용될 수 있을 밝혀둡니다. (교육 도구 개발 및 개선, 연구, 테스트 케이스 및 교육용 데이터셋 생성 등).
