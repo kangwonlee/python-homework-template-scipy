@@ -84,6 +84,7 @@ __Happy coding!__
 
 ### Resources 참고 자료
 * [How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+* [좋은 Git Commit message 작성법]( https://velog.io/@k-minsik/좋은-Git-Commit-message-작성법")
 
 ## NOTICE REGARDING STUDENT SUBMISSIONS<br>제출 결과물에 대한 알림
 
