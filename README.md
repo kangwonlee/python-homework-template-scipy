@@ -45,6 +45,76 @@ __Happy coding!__
 | Does code respect style guidelines?<br>코드 스타일 권고사항을 준수하는가? | 1 |
 | Is the code implemented as required?<br>코드가 요구사항을 만족하는가? | 3 |
 
+## Instructor Setup
+
+This template is designed for use with [GitHub Classroom](https://classroom.github.com/). Before distributing to students, configure the following in your GitHub organization or repository settings.
+
+### How the Two-Repo Pattern Works
+
+Each assignment requires **two** repositories:
+
+1. **Homework template** (this repo) — student-facing, contains the assignment skeleton (`exercise.py`) and the `classroom.yml` workflow that pulls the grader image and runs tests on student pushes.
+2. **Grader template** ([python-pytest-template](https://github.com/kangwonlee/python-pytest-template)) — instructor-facing, contains pytest test files and a Dockerfile. Its CI builds and publishes a grader Docker image to GHCR.
+
+### Required Secrets
+
+Set these in **Settings > Secrets and variables > Actions > Secrets** at the organization level (recommended) or per repository.
+
+#### `CR_PAT` (required)
+
+A GitHub Personal Access Token used to pull the grader Docker image from GHCR.
+
+1. Go to **GitHub > Settings (user) > Developer settings > Personal access tokens > Fine-grained tokens**.
+2. Click **Generate new token**.
+3. Set the following permissions:
+
+| Permission | Access | Purpose |
+|:----------:|:------:|:--------|
+| Packages   | Read   | Pull grader Docker images from GHCR |
+
+4. Copy the token and save it as a repository or organization secret named `CR_PAT`.
+
+> If using GitHub Classroom, set `CR_PAT` as an **organization secret** so all student repos inherit it automatically.
+
+#### LLM API Keys (at least one required)
+
+The AI tutor step provides personalized feedback to students. At least one key must be set. The workflow validates this and fails early if none are configured.
+
+| Secret Name | Service | Where to Obtain |
+|:-----------:|:-------:|:----------------|
+| `CLAUDE_API_KEY` | Anthropic Claude | https://console.anthropic.com/ |
+| `GOOGLE_API_KEY` | Google Gemini | https://aistudio.google.com/ |
+| `XAI_API_KEY` | xAI Grok | https://console.x.ai/ |
+| `NVIDIA_NIM_API_KEY` | NVIDIA NIM | https://build.nvidia.com/ |
+| `PERPLEXITY_API_KEY` | Perplexity | https://perplexity.ai/settings/api |
+
+#### `DEFAULT_MODEL` (optional)
+
+Specifies the preferred LLM model. If unset, the AI tutor defaults to Gemini or uses whichever single key is available.
+
+### Repository Variable
+
+Set in **Settings > Secrets and variables > Actions > Variables** tab.
+
+#### `ECA_HW_???`
+
+Replace `???` with your assignment identifier (e.g., `PYTHON_GRADER_301` for assignment 301). The value is the full GHCR image URL of the grader, e.g.:
+
+```
+ghcr.io/your-org/eca-pytest-???:latest
+```
+
+If this variable is not set, the workflow falls back to auto-constructing the URL as `ghcr.io/{owner}/python-pytest-{assignment_num}:latest`, where `{assignment_num}` is extracted from the repository name.
+
+### Customizing for a New Assignment
+
+1. Use this template to create a new repository (click **Use this template** on GitHub).
+2. Edit `README.md` — fill in the Purpose, Description, Instructions, Example Run, and Tips sections.
+3. Edit `exercise.py` — provide starter code or an empty skeleton for students.
+4. Update the grading criteria table if point allocations differ.
+5. Set `INPUT_EXPLANATION-IN` in `classroom.yml` to the desired feedback language (default: `"English"`).
+6. Set the `CR_PAT` secret, at least one LLM API key, and the `ECA_HW_???` variable.
+
 ``From here is common to all assignments.``
 
 ## Submission 제출 방법
@@ -94,5 +164,9 @@ __Happy coding!__
 * The submissions will be anonymized and used solely for educational or research purposes. No personally identifiable information will be shared.<br>제출된 결과물은 익명화되어 교육 및 연구 목적으로만 사용되며, 개인 식별 정보는 공유되지 않을 것입니다.
 
 * If you do not wish to have your submission used for any of these purposes, please inform the instructor before the assignment deadline.<br>위와 같은 목적으로 사용되기 원하지 않는 경우, 과제 마감일 전에 강사에게 알려주기 바랍니다.
+
+## Acknowledgments
+
+* The template for this assigment is registered as a part of #C-2025-016393 in the Korea Copyright Commission.
 
 ``Until here is common to all assignments.``
