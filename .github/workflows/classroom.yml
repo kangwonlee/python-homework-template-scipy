@@ -1,4 +1,4 @@
-# Thin caller for Python function assignments (custom/Korean).
+# Thin caller for standard Python code assignments.
 # Delegates all logic to the shared reusable workflow in workflows-central.
 #
 # After forking to a classroom org, update the 'uses:' line below
@@ -24,8 +24,7 @@ permissions:
 
 jobs:
   grade:
-    uses: kangwonlee/workflows-central/.github/workflows/classroom-reusable.yml@v3.0.0
+    uses: kangwonlee/workflows-central/.github/workflows/classroom-reusable.yml@v3.2.0
     with:
       instructor_org: ${{ vars.INSTRUCTOR_ORG }}
-      explanation_language: Korean
     secrets: inherit
